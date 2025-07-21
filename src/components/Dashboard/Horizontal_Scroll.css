@@ -1,0 +1,106 @@
+/* ===== Container Styling ===== */
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== Scrollable Content Styling ===== */
+.scroll-content {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
+  margin: 0 2rem;
+  color: #333;
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Scroll Buttons ===== */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: lightblue;
+  color: #333;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+  height: 80%;
+  width: 2rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.scroll-btn.left {
+  left: 0;
+  
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+/* ===== Generic Card Container ===== */
+.scroll-item {
+  flex: 0 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.scroll-item:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Large Card ===== */
+.scroll-item.large-card {
+  width: 250px;
+  height: 150px;
+  background: linear-gradient(145deg, #f1f3f8, #dfe4ec);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ===== Small Date Card ===== */
+.scroll-item.small-card {
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  color: #333;
+  text-align: center;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.scroll-item.small-card:hover {
+  background-color: #f0f4ff;
+  box-shadow: 0 2px 6px rgba(100, 100, 255, 0.2);
+}
+
+/* Selected date card */
+.scroll-item.small-card.selected {
+  background-color: hwb(244 79% 0%);
+  font-weight: 600;
+  color: #1d3e8a;
+  box-shadow: 0 0 0 2px #85a9ff;
+}

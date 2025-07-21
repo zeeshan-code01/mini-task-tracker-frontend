@@ -1,0 +1,32 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 3px 3rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: lightblue;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  max-height: 8px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
